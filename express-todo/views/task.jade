@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	h1= title
+	- if(docs.length)
+		table
+			tr
+				th Task
+					each task in docs
+						tr
+							td #{task.task}
+	- else
+		p You don't have any tasks!
